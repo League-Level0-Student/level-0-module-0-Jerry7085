@@ -11,24 +11,31 @@ public class RobotSpiral {
 
 	public static void main(String[] args) {
 		
+		Robot bob = new Robot();
+		
+		bob.penDown();
 		// Create a new Robot
 		
 		// Set your robot's pen down 
 		
 		// SPEED. Set the robot to go at max speed (100)
 		
-        // LOOP. Use a for loop to repeat ALL the following lines of code 50 times. 
-		
-				// Change the robot pen color to random
 			
+		
+		bob.setSpeed(100);
+		
+        // LOOP. Use a for loop to repeat ALL the following lines of code 50 times. 
+		for (int i = 0; i <50; i++) { 
+				// Change the robot pen color to random
+			bob.setRandomPenColor();
 				// DRAW.    Move the robot (5*i) pixels
 				//          "i" is the variable in the for loop	
-			
+			bob.move(5*i);
 				// TURN.    Turn the robot (360/7) degrees to the right
-			
+			bob.turn(360/7);
 				// Change the robot pen width to (i)
-
-		
+			bob.setPenWidth(i);
+		}
 		// Check the pattern against the picture in the recipe. If it matches, you are done!
 		
 	}
